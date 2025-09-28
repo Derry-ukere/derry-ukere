@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derry Ukere - Senior Tech Lead & DevOps Engineer</title>
+    <title>Derry Ukere - AI Systems Architect</title>
     <style>
         * {
             margin: 0;
@@ -12,417 +12,461 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            font-size: 11pt;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
         }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header {
-            text-align: center;
-            border-bottom: 3px solid #2c5aa0;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .name {
-            font-size: 28pt;
-            font-weight: bold;
-            color: #1a365d;
-            margin-bottom: 8px;
-        }
-        
-        .title {
-            font-size: 16pt;
-            color: #2c5aa0;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        .contact-info {
-            font-size: 10pt;
-            color: #666;
-        }
-        
-        .section {
-            margin-bottom: 25px;
-        }
-        
-        .section-title {
-            font-size: 14pt;
-            font-weight: bold;
-            color: #1a365d;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .summary {
-            text-align: justify;
-            line-height: 1.7;
-            font-size: 11pt;
-        }
-        
-        .job {
-            margin-bottom: 20px;
-            page-break-inside: avoid;
-        }
-        
-        .job-header {
+
+        .hero {
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
-        }
-        
-        .job-title {
-            font-weight: bold;
-            font-size: 12pt;
-            color: #1a365d;
-        }
-        
-        .company {
-            font-weight: 600;
-            color: #2c5aa0;
-            font-size: 11pt;
-        }
-        
-        .duration {
-            color: #666;
-            font-size: 10pt;
-            font-weight: 500;
-        }
-        
-        .location {
-            color: #666;
-            font-size: 10pt;
-            font-style: italic;
-        }
-        
-        .job-description {
-            margin-top: 8px;
-        }
-        
-        .achievements {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .achievements li {
-            margin-bottom: 6px;
-            padding-left: 20px;
+            align-items: center;
+            justify-content: center;
             position: relative;
+            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
         }
-        
-        .achievements li:before {
-            content: "▸";
-            color: #2c5aa0;
-            font-weight: bold;
+
+        .hero::before {
+            content: '';
             position: absolute;
+            top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
         }
-        
-        .skills-grid {
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            max-width: 900px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-image-container {
+            position: relative;
+            margin-bottom: 2rem;
+            animation: profileFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes profileFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid transparent;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+            padding: 4px;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 80px rgba(59, 130, 246, 0.4);
+        }
+
+        .profile-image-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-glow {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+            border-radius: 50%;
+            opacity: 0.2;
+            filter: blur(20px);
+            z-index: -1;
+            animation: pulseGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            from { opacity: 0.2; transform: scale(1); }
+            to { opacity: 0.4; transform: scale(1.1); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: brightness(1); }
+            to { filter: brightness(1.2) drop-shadow(0 0 20px rgba(59, 130, 246, 0.3)); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-highlight {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            background: linear-gradient(90deg, #1e293b, #334155);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid #475569;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            gap: 2rem;
+            margin: 4rem 0;
         }
-        
-        .skill-category {
-            background: #f7fafc;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #2c5aa0;
+
+        .stat-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6));
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        
-        .skill-category h4 {
-            color: #1a365d;
-            margin-bottom: 8px;
-            font-size: 11pt;
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        
-        .skill-tags {
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .services {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.7));
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            backdrop-filter: blur(15px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 80px rgba(59, 130, 246, 0.25);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #3b82f6;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .service-description {
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 0.5rem;
         }
-        
-        .skill-tag {
-            background: #e2e8f0;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 9pt;
-            color: #2d3748;
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
-        
-        .education {
+
+        .cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            margin: 4rem 0;
+        }
+
+        .cta-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f7fafc;
-            padding: 12px;
-            border-radius: 6px;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        
-        .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #38a169;
-            margin-bottom: 20px;
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-size: 1rem;
         }
-        
-        .highlight-title {
-            font-weight: bold;
-            color: #1a365d;
-            margin-bottom: 5px;
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            border: none;
         }
-        
-        @media print {
-            body { font-size: 10pt; }
-            .container { padding: 10px; }
-            .section { margin-bottom: 15px; }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #3b82f6;
+            border: 2px solid #3b82f6;
+        }
+
+        .btn-secondary:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 250px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 class="name">DERRY UKERE</h1>
-            <h2 class="title">Senior Tech Lead & DevOps Engineer | AI Systems Architect</h2>
-            <div class="contact-info">
-                Abuja, Federal Capital Territory, Nigeria | LinkedIn: derry-ukere | Email: ukderry@gmail.com | Phone: +234 816 525 8860
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Professional Profile Image -->
+            <div class="profile-image-container">
+                <div class="profile-glow"></div>
+                <div class="profile-image">
+                    <img src="./WhatsApp Image 2025-09-28 at 11.24.28 PM.jpeg" alt="Derry Ukere - AI Systems Architect" class="profile-image-inner">
+                </div>
             </div>
-        </header>
-
-        <!-- Value Proposition Highlight -->
-        <div class="highlight">
-            <div class="highlight-title">Unique Value Proposition</div>
-            Tech Lead scaling AI-powered platforms to 900K+ users • 8+ years DevOps expertise • Agentic AI systems developer • Full-stack engineering capability • Cross-functional team leadership across frontend-to-backend development
-        </div>
-
-        <!-- Professional Summary -->
-        <section class="section">
-            <h3 class="section-title">Professional Summary</h3>
-            <p class="summary">
-                Innovative Tech Lead and Senior DevOps Engineer with 8+ years of experience architecting scalable cloud infrastructure and leading cross-functional teams. Currently driving technical excellence at Distinct AI (UK), where I've helped scale the platform to serve over 900,000 users while pioneering agentic AI systems that autonomously solve complex problems. Expert in full-stack development (JavaScript), infrastructure as code, Kubernetes orchestration, and the C4 model for software architecture. Proven track record of mentoring development teams, implementing CI/CD pipelines, and delivering enterprise-grade solutions across multiple industries. Combines deep technical expertise with strategic leadership to drive innovation and operational excellence.
-            </p>
-        </section>
-
-        <!-- Professional Experience -->
-        <section class="section">
-            <h3 class="section-title">Professional Experience</h3>
             
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Tech Lead</div>
-                        <div class="company">Distinct AI</div>
-                        <div class="location">United Kingdom (Remote)</div>
-                    </div>
-                    <div class="duration">2024 - Present</div>
+            <h1 class="hero-title">AI Systems Architect</h1>
+            <p class="hero-subtitle">Transforming Ideas into Intelligent, Scalable Solutions</p>
+            
+            <div class="hero-highlight">
+                <strong>🤖 Agentic AI Pioneer</strong> • Design to Production Expert • <strong>900K+ Users Scaled</strong>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Years DevOps Excellence</div>
                 </div>
-                <div class="job-description">
-                    <ul class="achievements">
-                        <li><strong>Platform Scaling Achievement:</strong> Led technical architecture and infrastructure scaling that supported platform growth to <strong>900,000+ active users</strong>, achieving 99.9% uptime</li>
-                        <li><strong>Agentic AI Innovation:</strong> Designed and implemented autonomous AI agents capable of complex reasoning and problem-solving, reducing manual intervention by 70% and improving system reliability</li>
-                        <li><strong>Full-Stack Leadership:</strong> Manage and mentor diverse development teams spanning frontend (React/Vue.js), backend (Node.js/Python), and DevOps, ensuring seamless delivery across the entire technology stack</li>
-                        <li><strong>Infrastructure Excellence:</strong> Architected cloud-native solutions using IaC (Terraform), Kubernetes clusters with custom Helm charts, and implemented C4 model for system documentation and design</li>
-                        <li><strong>Technical Versatility:</strong> Actively contribute to software engineering tasks when needed, leveraging full-stack JavaScript expertise to unblock development bottlenecks and maintain delivery velocity</li>
-                        <li><strong>System Architecture:</strong> Created comprehensive architectural diagrams and technical documentation using C4 modeling, enabling clear communication across multiple abstraction layers</li>
-                        <li><strong>Performance Optimization:</strong> Implemented monitoring and alerting systems that improved system performance by 45% and reduced incident response time by 60%</li>
-                    </ul>
+                <div class="stat-card">
+                    <div class="stat-number">900K+</div>
+                    <div class="stat-label">Users Supported</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime Achievement</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-label">Automation Increase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">What I Deliver</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3 class="service-title">Intelligent AI Agents</h3>
+                <p class="service-description">
+                    Build autonomous AI systems that think, reason, and solve complex problems without human intervention. From concept to deployment.
+                </p>
+                <div class="service-tags">
+                    <span class="tag">Agentic AI</span>
+                    <span class="tag">Autonomous Systems</span>
+                    <span class="tag">Problem Solving</span>
                 </div>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Senior DevOps Engineer</div>
-                        <div class="company">Capgemini</div>
-                        <div class="location">Virginia, United States</div>
-                    </div>
-                    <div class="duration">Aug 2021 - 2024</div>
-                </div>
-                <div class="job-description">
-                    <ul class="achievements">
-                        <li><strong>Enterprise Cloud Solutions:</strong> Delivered secure, scalable cloud infrastructure for Fortune 500 clients across multiple industries, managing budgets exceeding $2M annually</li>
-                        <li><strong>Security & Compliance:</strong> Conducted comprehensive security assessments and implemented zero-trust architecture principles, achieving SOC 2 Type II compliance for 3 major client engagements</li>
-                        <li><strong>Cost Optimization:</strong> Implemented automated cost optimization strategies using Azure and AWS native tools, reducing client cloud spend by average of 35% while improving performance</li>
-                        <li><strong>Microservices Architecture:</strong> Designed and deployed containerized microservices using Docker and Azure Kubernetes Service (AKS), improving application scalability and deployment frequency by 300%</li>
-                        <li><strong>Team Leadership:</strong> Mentored 8+ junior engineers and established DevOps best practices, resulting in 50% faster deployment cycles and 40% reduction in production incidents</li>
-                    </ul>
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3 class="service-title">Full-Stack Architecture</h3>
+                <p class="service-description">
+                    End-to-end system design from wireframes to production. Cloud infrastructure, microservices, and scalable architectures that grow with your business.
+                </p>
+                <div class="service-tags">
+                    <span class="tag">System Design</span>
+                    <span class="tag">Cloud Architecture</span>
+                    <span class="tag">Microservices</span>
                 </div>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Senior DevOps Engineer</div>
-                        <div class="company">VariQ</div>
-                        <div class="location">United States</div>
-                    </div>
-                    <div class="duration">Dec 2020 - Aug 2021</div>
-                </div>
-                <div class="job-description">
-                    <ul class="achievements">
-                        <li>Implemented CI/CD pipelines using Jenkins and GitLab, reducing deployment time by 60% and improving code quality through automated testing</li>
-                        <li>Migrated legacy applications to containerized environments, improving resource utilization by 40% and system reliability</li>
-                    </ul>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3 class="service-title">DevOps Excellence</h3>
+                <p class="service-description">
+                    Streamline your operations with automated CI/CD, infrastructure as code, and monitoring systems that ensure reliability at scale.
+                </p>
+                <div class="service-tags">
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">CI/CD</span>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Senior DevOps Engineer</div>
-                        <div class="company">Octo (formerly Sevatec)</div>
-                        <div class="location">Fairfax, Virginia, United States</div>
-                    </div>
-                    <div class="duration">Jun 2019 - Dec 2020</div>
-                </div>
-                <div class="job-description">
-                    <ul class="achievements">
-                        <li>Architected multi-cloud infrastructure solutions for government clients, ensuring FISMA compliance and high availability</li>
-                        <li>Developed Infrastructure as Code templates using Terraform and CloudFormation, standardizing deployments across 15+ environments</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Cloud Operations Engineer</div>
-                        <div class="company">Cognizance Technologies</div>
-                        <div class="location">United States</div>
-                    </div>
-                    <div class="duration">May 2017 - Jun 2019</div>
-                </div>
-                <div class="job-description">
-                    <ul class="achievements">
-                        <li>Managed cloud infrastructure monitoring and incident response, maintaining 99.5+ uptime across production environments</li>
-                        <li>Automated routine operations tasks, reducing manual effort by 70% and improving system consistency</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Skills -->
-        <section class="section">
-            <h3 class="section-title">Technical Expertise</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Cloud & Infrastructure</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Azure</span>
-                        <span class="skill-tag">Terraform</span>
-                        <span class="skill-tag">CloudFormation</span>
-                        <span class="skill-tag">IaC</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Containerization & Orchestration</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Helm Charts</span>
-                        <span class="skill-tag">AKS</span>
-                        <span class="skill-tag">Container Security</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>AI & Software Development</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Agentic AI</span>
-                        <span class="skill-tag">JavaScript (Full-stack)</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">React/Vue.js</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>DevOps & CI/CD</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Azure DevOps</span>
-                        <span class="skill-tag">Jenkins</span>
-                        <span class="skill-tag">GitLab CI</span>
-                        <span class="skill-tag">GitHub Actions</span>
-                        <span class="skill-tag">Site Reliability</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Architecture & Design</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C4 Model</span>
-                        <span class="skill-tag">Microservices</span>
-                        <span class="skill-tag">System Design</span>
-                        <span class="skill-tag">Technical Documentation</span>
-                        <span class="skill-tag">Solution Architecture</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Leadership & Management</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Team Leadership</span>
-                        <span class="skill-tag">Cross-functional Management</span>
-                        <span class="skill-tag">Mentoring</span>
-                        <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">Technical Strategy</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications -->
-        <section class="section">
-            <h3 class="section-title">Certifications</h3>
-            <ul class="achievements">
-                <li>Andela Certified Cloud Practitioner</li>
-                <li>Andela Certified DevOps Engineer</li>
-                <li>Andela Certified Cloud Solutions Architect</li>
-            </ul>
-        </section>
-
-        <!-- Education -->
-        <section class="section">
-            <h3 class="section-title">Education</h3>
-            <div class="education">
-                <div>
-                    <strong>Bachelor of Applied Science (BASc), Computer Science</strong><br>
-                    Petroleum Training Institute, Nigeria
-                </div>
-                <div class="duration">2015</div>
-            </div>
-        </section>
-
-        <!-- Key Achievements -->
-        <section class="section">
-            <h3 class="section-title">Key Achievements</h3>
-            <ul class="achievements">
-                <li><strong>Platform Scaling:</strong> Led infrastructure that supports 900K+ users with 99.9% uptime</li>
-                <li><strong>AI Innovation:</strong> Pioneer in agentic AI systems development and implementation</li>
-                <li><strong>Cost Optimization:</strong> Achieved average 35% cloud cost reduction across multiple client engagements</li>
-                <li><strong>Team Development:</strong> Mentored 15+ engineers throughout career, with 90% achieving promotions</li>
-                <li><strong>Full-Stack Versatility:</strong> Unique combination of DevOps expertise and software engineering capability</li>
-            </ul>
-        </section>
-    </div>
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <h2 class="cta-title">Ready to Scale Your Vision?</h2>
+        <p class="cta-description">
+            Whether you need AI agents, scalable architecture, or bulletproof infrastructure, let's build something extraordinary together.
+        </p>
+        <div class="cta-buttons">
+            <a href="mailto:ukderry@gmail.com" class="btn btn-primary">Start Your Project</a>
+            <a href="https://www.linkedin.com/in/mudiaga-ukere-701138245/" class="btn btn-secondary">View LinkedIn</a>
+        </div>
+    </section>
 </body>
 </html>
