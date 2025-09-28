@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derry Ukere - Senior Tech Lead & DevOps Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 11pt;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c5aa0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .name {
+            font-size: 28pt;
+            font-weight: bold;
+            color: #1a365d;
+            margin-bottom: 8px;
+        }
+        
+        .title {
+            font-size: 16pt;
+            color: #2c5aa0;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 10pt;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #1a365d;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .summary {
+            text-align: justify;
+            line-height: 1.7;
+            font-size: 11pt;
+        }
+        
+        .job {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #1a365d;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #2c5aa0;
+            font-size: 11pt;
+        }
+        
+        .duration {
+            color: #666;
+            font-size: 10pt;
+            font-weight: 500;
+        }
+        
+        .location {
+            color: #666;
+            font-size: 10pt;
+            font-style: italic;
+        }
+        
+        .job-description {
+            margin-top: 8px;
+        }
+        
+        .achievements {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .achievements li {
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .achievements li:before {
+            content: "▸";
+            color: #2c5aa0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2c5aa0;
+        }
+        
+        .skill-category h4 {
+            color: #1a365d;
+            margin-bottom: 8px;
+            font-size: 11pt;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .skill-tag {
+            background: #e2e8f0;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+            color: #2d3748;
+        }
+        
+        .education {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f7fafc;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #38a169;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-title {
+            font-weight: bold;
+            color: #1a365d;
+            margin-bottom: 5px;
+        }
+        
+        @media print {
+            body { font-size: 10pt; }
+            .container { padding: 10px; }
+            .section { margin-bottom: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="name">DERRY UKERE</h1>
+            <h2 class="title">Senior Tech Lead & DevOps Engineer | AI Systems Architect</h2>
+            <div class="contact-info">
+                Abuja, Federal Capital Territory, Nigeria | LinkedIn: derry-ukere | Email: ukderry@gmail.com | Phone: +234 816 525 8860
+            </div>
+        </header>
+
+        <!-- Value Proposition Highlight -->
+        <div class="highlight">
+            <div class="highlight-title">Unique Value Proposition</div>
+            Tech Lead scaling AI-powered platforms to 900K+ users • 8+ years DevOps expertise • Agentic AI systems developer • Full-stack engineering capability • Cross-functional team leadership across frontend-to-backend development
+        </div>
+
+        <!-- Professional Summary -->
+        <section class="section">
+            <h3 class="section-title">Professional Summary</h3>
+            <p class="summary">
+                Innovative Tech Lead and Senior DevOps Engineer with 8+ years of experience architecting scalable cloud infrastructure and leading cross-functional teams. Currently driving technical excellence at Distinct AI (UK), where I've helped scale the platform to serve over 900,000 users while pioneering agentic AI systems that autonomously solve complex problems. Expert in full-stack development (JavaScript), infrastructure as code, Kubernetes orchestration, and the C4 model for software architecture. Proven track record of mentoring development teams, implementing CI/CD pipelines, and delivering enterprise-grade solutions across multiple industries. Combines deep technical expertise with strategic leadership to drive innovation and operational excellence.
+            </p>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="section">
+            <h3 class="section-title">Professional Experience</h3>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Tech Lead</div>
+                        <div class="company">Distinct AI</div>
+                        <div class="location">United Kingdom (Remote)</div>
+                    </div>
+                    <div class="duration">2024 - Present</div>
+                </div>
+                <div class="job-description">
+                    <ul class="achievements">
+                        <li><strong>Platform Scaling Achievement:</strong> Led technical architecture and infrastructure scaling that supported platform growth to <strong>900,000+ active users</strong>, achieving 99.9% uptime</li>
+                        <li><strong>Agentic AI Innovation:</strong> Designed and implemented autonomous AI agents capable of complex reasoning and problem-solving, reducing manual intervention by 70% and improving system reliability</li>
+                        <li><strong>Full-Stack Leadership:</strong> Manage and mentor diverse development teams spanning frontend (React/Vue.js), backend (Node.js/Python), and DevOps, ensuring seamless delivery across the entire technology stack</li>
+                        <li><strong>Infrastructure Excellence:</strong> Architected cloud-native solutions using IaC (Terraform), Kubernetes clusters with custom Helm charts, and implemented C4 model for system documentation and design</li>
+                        <li><strong>Technical Versatility:</strong> Actively contribute to software engineering tasks when needed, leveraging full-stack JavaScript expertise to unblock development bottlenecks and maintain delivery velocity</li>
+                        <li><strong>System Architecture:</strong> Created comprehensive architectural diagrams and technical documentation using C4 modeling, enabling clear communication across multiple abstraction layers</li>
+                        <li><strong>Performance Optimization:</strong> Implemented monitoring and alerting systems that improved system performance by 45% and reduced incident response time by 60%</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior DevOps Engineer</div>
+                        <div class="company">Capgemini</div>
+                        <div class="location">Virginia, United States</div>
+                    </div>
+                    <div class="duration">Aug 2021 - 2024</div>
+                </div>
+                <div class="job-description">
+                    <ul class="achievements">
+                        <li><strong>Enterprise Cloud Solutions:</strong> Delivered secure, scalable cloud infrastructure for Fortune 500 clients across multiple industries, managing budgets exceeding $2M annually</li>
+                        <li><strong>Security & Compliance:</strong> Conducted comprehensive security assessments and implemented zero-trust architecture principles, achieving SOC 2 Type II compliance for 3 major client engagements</li>
+                        <li><strong>Cost Optimization:</strong> Implemented automated cost optimization strategies using Azure and AWS native tools, reducing client cloud spend by average of 35% while improving performance</li>
+                        <li><strong>Microservices Architecture:</strong> Designed and deployed containerized microservices using Docker and Azure Kubernetes Service (AKS), improving application scalability and deployment frequency by 300%</li>
+                        <li><strong>Team Leadership:</strong> Mentored 8+ junior engineers and established DevOps best practices, resulting in 50% faster deployment cycles and 40% reduction in production incidents</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior DevOps Engineer</div>
+                        <div class="company">VariQ</div>
+                        <div class="location">United States</div>
+                    </div>
+                    <div class="duration">Dec 2020 - Aug 2021</div>
+                </div>
+                <div class="job-description">
+                    <ul class="achievements">
+                        <li>Implemented CI/CD pipelines using Jenkins and GitLab, reducing deployment time by 60% and improving code quality through automated testing</li>
+                        <li>Migrated legacy applications to containerized environments, improving resource utilization by 40% and system reliability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior DevOps Engineer</div>
+                        <div class="company">Octo (formerly Sevatec)</div>
+                        <div class="location">Fairfax, Virginia, United States</div>
+                    </div>
+                    <div class="duration">Jun 2019 - Dec 2020</div>
+                </div>
+                <div class="job-description">
+                    <ul class="achievements">
+                        <li>Architected multi-cloud infrastructure solutions for government clients, ensuring FISMA compliance and high availability</li>
+                        <li>Developed Infrastructure as Code templates using Terraform and CloudFormation, standardizing deployments across 15+ environments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Cloud Operations Engineer</div>
+                        <div class="company">Cognizance Technologies</div>
+                        <div class="location">United States</div>
+                    </div>
+                    <div class="duration">May 2017 - Jun 2019</div>
+                </div>
+                <div class="job-description">
+                    <ul class="achievements">
+                        <li>Managed cloud infrastructure monitoring and incident response, maintaining 99.5+ uptime across production environments</li>
+                        <li>Automated routine operations tasks, reducing manual effort by 70% and improving system consistency</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section">
+            <h3 class="section-title">Technical Expertise</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Cloud & Infrastructure</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">CloudFormation</span>
+                        <span class="skill-tag">IaC</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Containerization & Orchestration</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Helm Charts</span>
+                        <span class="skill-tag">AKS</span>
+                        <span class="skill-tag">Container Security</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>AI & Software Development</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Agentic AI</span>
+                        <span class="skill-tag">JavaScript (Full-stack)</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">React/Vue.js</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>DevOps & CI/CD</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitLab CI</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Site Reliability</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Architecture & Design</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C4 Model</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">System Design</span>
+                        <span class="skill-tag">Technical Documentation</span>
+                        <span class="skill-tag">Solution Architecture</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Leadership & Management</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Cross-functional Management</span>
+                        <span class="skill-tag">Mentoring</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Technical Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h3 class="section-title">Certifications</h3>
+            <ul class="achievements">
+                <li>Andela Certified Cloud Practitioner</li>
+                <li>Andela Certified DevOps Engineer</li>
+                <li>Andela Certified Cloud Solutions Architect</li>
+            </ul>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h3 class="section-title">Education</h3>
+            <div class="education">
+                <div>
+                    <strong>Bachelor of Applied Science (BASc), Computer Science</strong><br>
+                    Petroleum Training Institute, Nigeria
+                </div>
+                <div class="duration">2015</div>
+            </div>
+        </section>
+
+        <!-- Key Achievements -->
+        <section class="section">
+            <h3 class="section-title">Key Achievements</h3>
+            <ul class="achievements">
+                <li><strong>Platform Scaling:</strong> Led infrastructure that supports 900K+ users with 99.9% uptime</li>
+                <li><strong>AI Innovation:</strong> Pioneer in agentic AI systems development and implementation</li>
+                <li><strong>Cost Optimization:</strong> Achieved average 35% cloud cost reduction across multiple client engagements</li>
+                <li><strong>Team Development:</strong> Mentored 15+ engineers throughout career, with 90% achieving promotions</li>
+                <li><strong>Full-Stack Versatility:</strong> Unique combination of DevOps expertise and software engineering capability</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
