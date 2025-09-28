@@ -55,7 +55,8 @@
 
         .profile-image-container {
             position: relative;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            margin-top: 2rem;
             animation: profileFloat 6s ease-in-out infinite;
         }
 
@@ -347,7 +348,282 @@
             transform: translateY(-2px);
         }
 
+        /* Portfolio Section Styles */
+        .portfolio {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .featured-project {
+            margin-top: 4rem;
+        }
+
+        .project-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.7));
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            backdrop-filter: blur(15px);
+        }
+
+        .project-badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .project-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .metric-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #3b82f6;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            background: rgba(139, 92, 246, 0.1);
+            color: #8b5cf6;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-visual {
+            position: relative;
+        }
+
+        .browser-mockup {
+            background: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .browser-header {
+            background: #0f172a;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .browser-dots span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #64748b;
+        }
+
+        .browser-dots span:first-child { background: #ef4444; }
+        .browser-dots span:nth-child(2) { background: #f59e0b; }
+        .browser-dots span:nth-child(3) { background: #10b981; }
+
+        .browser-url {
+            background: #334155;
+            color: #94a3b8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            flex: 1;
+        }
+
+        .browser-content {
+            padding: 2rem;
+            height: 300px;
+        }
+
+        .ai-dashboard {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .dashboard-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .status-indicator {
+            font-size: 0.8rem;
+            color: #10b981;
+            font-weight: 500;
+        }
+
+        .dashboard-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-block {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        .stat-icon {
+            font-size: 1.5rem;
+        }
+
+        .stat-num {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+
+        .stat-desc {
+            font-size: 0.7rem;
+            color: #94a3b8;
+        }
+
+        .ai-visualization {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ai-nodes {
+            position: relative;
+            width: 200px;
+            height: 100px;
+        }
+
+        .node {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .node-1 { top: 30px; left: 0; animation-delay: 0s; }
+        .node-2 { top: 0; left: 80px; animation-delay: 0.5s; }
+        .node-3 { top: 60px; right: 0; animation-delay: 1s; }
+
+        .connection {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            right: 20px;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            opacity: 0.6;
+            animation: flow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        @keyframes flow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
         @media (max-width: 768px) {
+            .project-showcase {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            
+            .project-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .browser-content {
+                padding: 1rem;
+                height: 250px;
+            }
+            
+            .dashboard-stats {
+                flex-direction: column;
+            }
+            
             .profile-image {
                 width: 120px;
                 height: 120px;
@@ -412,6 +688,107 @@
         </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="portfolio-container">
+            <h2 class="section-title">Live Projects Making Impact</h2>
+            
+            <div class="featured-project">
+                <div class="project-showcase">
+                    <div class="project-info">
+                        <div class="project-badge">🚀 FEATURED PROJECT</div>
+                        <h3 class="project-title">Distinct.ai - Intelligent Recruitment Platform</h3>
+                        <p class="project-description">
+                            Led the technical architecture and deployment of AI-powered recruitment systems that revolutionized how companies find and hire talent. Built autonomous agents that screen, evaluate, and match candidates with unprecedented accuracy.
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-number">900K+</div>
+                                <div class="metric-label">Active Users</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">99.9%</div>
+                                <div class="metric-label">System Uptime</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">70%</div>
+                                <div class="metric-label">Faster Hiring</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">$2M+</div>
+                                <div class="metric-label">Cost Savings</div>
+                            </div>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">Agentic AI</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://www.distinct.ai" target="_blank" class="btn btn-primary">View Live Platform</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-visual">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="browser-url">distinct.ai</div>
+                            </div>
+                            <div class="browser-content">
+                                <div class="ai-dashboard">
+                                    <div class="dashboard-header">
+                                        <div class="dashboard-title">AI Recruitment Dashboard</div>
+                                        <div class="status-indicator">🟢 Live & Active</div>
+                                    </div>
+                                    <div class="dashboard-stats">
+                                        <div class="stat-block">
+                                            <div class="stat-icon">👥</div>
+                                            <div class="stat-info">
+                                                <div class="stat-num">900K+</div>
+                                                <div class="stat-desc">Users</div>
+                                            </div>
+                                        </div>
+                                        <div class="stat-block">
+                                            <div class="stat-icon">🤖</div>
+                                            <div class="stat-info">
+                                                <div class="stat-num">AI</div>
+                                                <div class="stat-desc">Agents</div>
+                                            </div>
+                                        </div>
+                                        <div class="stat-block">
+                                            <div class="stat-icon">⚡</div>
+                                            <div class="stat-info">
+                                                <div class="stat-num">70%</div>
+                                                <div class="stat-desc">Faster</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ai-visualization">
+                                        <div class="ai-nodes">
+                                            <div class="node node-1"></div>
+                                            <div class="node node-2"></div>
+                                            <div class="node node-3"></div>
+                                            <div class="connection"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services">
         <h2 class="section-title">What I Deliver</h2>
@@ -465,7 +842,7 @@
         </p>
         <div class="cta-buttons">
             <a href="mailto:ukderry@gmail.com" class="btn btn-primary">Start Your Project</a>
-            <a href="https://www.linkedin.com/in/mudiaga-ukere-701138245/" class="btn btn-secondary">View LinkedIn</a>
+            <a href="https://www.linkedin.com/in/mudiaga-ukere-701138245" class="btn btn-secondary">View LinkedIn</a>
         </div>
     </section>
 </body>
